@@ -1,0 +1,245 @@
+/* ===================================
+   Print Styles for Di sản Hồ Chí Minh
+   =================================== */
+
+@media print {
+    /* Reset margins and padding */
+    * {
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    
+    body {
+        font-family: serif;
+        font-size: 12pt;
+        line-height: 1.4;
+        color: black;
+        background: white;
+    }
+    
+    /* Hide unnecessary elements */
+    .main-header,
+    .hamburger,
+    .back-to-top,
+    .modal,
+    .card-btn,
+    button {
+        display: none !important;
+    }
+    
+    /* Adjust main content */
+    main {
+        margin-top: 0 !important;
+    }
+    
+    /* Hero section */
+    .hero {
+        height: auto !important;
+        background: none !important;
+        padding: 2rem 0;
+        margin-top: 0;
+        page-break-after: avoid;
+    }
+    
+    .hero-title {
+        font-size: 24pt;
+        color: black;
+        text-shadow: none;
+    }
+    
+    .hero-quote {
+        font-size: 14pt;
+        color: black;
+        font-style: italic;
+    }
+    
+    /* Sections */
+    .section-title {
+        font-size: 18pt;
+        color: black;
+        page-break-after: avoid;
+    }
+    
+    .section-title::after {
+        display: none;
+    }
+    
+    /* Timeline */
+    .timeline-item {
+        page-break-inside: avoid;
+        margin: 1rem 0;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+    
+    .timeline-year {
+        position: static;
+        transform: none;
+        background: black;
+        color: white;
+        display: inline-block;
+        padding: 0.2rem 0.5rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+    }
+    
+    .timeline::before {
+        display: none;
+    }
+    
+    .timeline-item:nth-child(odd) .timeline-content,
+    .timeline-item:nth-child(even) .timeline-content {
+        margin: 0;
+        text-align: left;
+    }
+    
+    /* Accordion */
+    .accordion-item {
+        page-break-inside: avoid;
+        margin-bottom: 1rem;
+    }
+    
+    .accordion-content {
+        max-height: none !important;
+        overflow: visible !important;
+        display: block !important;
+    }
+    
+    .accordion-header {
+        background: black !important;
+        color: white !important;
+        padding: 0.5rem 1rem;
+    }
+    
+    .accordion-icon {
+        display: none;
+    }
+    
+    /* Works grid */
+    .works-grid {
+        display: block !important;
+    }
+    
+    .work-card {
+        page-break-inside: avoid;
+        margin-bottom: 1rem;
+        border: 1px solid #ccc;
+        padding: 1rem;
+    }
+    
+    .work-image {
+        display: none;
+    }
+    
+    /* Cards and grids */
+    .topics-grid,
+    .info-grid,
+    .summary-grid,
+    .stats-grid {
+        display: block !important;
+    }
+    
+    .topic-card,
+    .info-card,
+    .summary-card {
+        page-break-inside: avoid;
+        margin-bottom: 1rem;
+        border: 1px solid #ccc;
+        padding: 1rem;
+    }
+    
+    .card-icon,
+    .info-icon,
+    .summary-icon {
+        display: none;
+    }
+    
+    /* Footer */
+    .main-footer {
+        background: none !important;
+        color: black !important;
+        border-top: 1px solid #ccc;
+        margin-top: 2rem;
+        padding: 1rem 0;
+    }
+    
+    /* Page breaks */
+    .page-header {
+        page-break-after: avoid;
+        background: none !important;
+        color: black !important;
+        padding: 1rem 0;
+        margin-top: 0;
+    }
+    
+    .page-title {
+        color: black !important;
+        font-size: 20pt;
+    }
+    
+    .page-subtitle {
+        color: black !important;
+        opacity: 1 !important;
+    }
+    
+    /* Links */
+    a {
+        color: black;
+        text-decoration: underline;
+    }
+    
+    a[href]:after {
+        content: " (" attr(href) ")";
+        font-size: 10pt;
+        color: #666;
+    }
+    
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+    
+    /* Blockquotes */
+    blockquote {
+        border-left: 3px solid #ccc;
+        padding-left: 1rem;
+        margin: 1rem 0;
+        font-style: italic;
+    }
+    
+    /* Lists */
+    ul, ol {
+        margin-left: 1.5rem;
+    }
+    
+    li {
+        margin-bottom: 0.25rem;
+    }
+    
+    /* Ensure text is readable */
+    h1, h2, h3, h4, h5, h6 {
+        color: black;
+    }
+    
+    p {
+        orphans: 3;
+        widows: 3;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        page-break-after: avoid;
+        orphans: 4;
+        widows: 4;
+    }
+    
+    /* Statistics */
+    .stat-number {
+        font-size: 16pt;
+        color: black;
+    }
+    
+    .stat-label {
+        font-size: 10pt;
+        color: black;
+    }
+}
